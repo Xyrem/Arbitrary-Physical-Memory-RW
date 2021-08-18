@@ -93,7 +93,7 @@ public:
 		RegRW_t A;
 
 		A.Register = Register;
-		A.Value = (uint64_t)&Value;
+		A.Value = Value;
 
 		DeviceIoControl(h, 0x222870, &A, sizeof(A), &A, sizeof(A), 0, 0);
 	}
